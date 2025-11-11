@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Agregar Atracción</h2>
+<form method="POST">
+    {% csrf_token %}
+    <input class="form-control mb-2" type="text" name="nombre" placeholder="Nombre">
+    <input class="form-control mb-2" type="text" name="tipo" placeholder="Tipo (Ej: Montaña Rusa)">
+    <input class="form-control mb-2" type="number" name="capacidad" placeholder="Capacidad (personas)">
+    <input class="form-control mb-2" type="text" name="estado" placeholder="Estado (Activa, Mantenimiento...)">
+    <input class="form-control mb-2" type="number" step="0.01" name="altura_min" placeholder="Altura mínima (m)">
+    <input class="form-control mb-3" type="number" name="id_emp" placeholder="ID Empleado encargado">
+    <button class="btn btn-success">Guardar Atracción</button>
+</form>
+{% endblock %}
